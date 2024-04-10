@@ -83,8 +83,7 @@ static const double lntiny = -0x1.77af8ebeae354p9;
 static const double invln2 = 0x1.71547652b82fep0;
 
 #if 0
-OLM_DLLEXPORT double exp(x)
-double x;
+OLM_DLLEXPORT double exp(double x)
 {
 	double  z,hi,lo,c;
 	int k;
@@ -129,8 +128,7 @@ double x;
 
 /* returns exp(r = x + c) for |c| < |x| with no overlap.  */
 
-double __exp__D(x, c)
-double x, c;
+double __exp__D(double x, double c)
 {
 	double  z,hi,lo;
 	int k;
