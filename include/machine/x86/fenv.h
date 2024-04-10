@@ -31,9 +31,6 @@
 
 #ifdef __LP64__
 
-#include "cdefs-compat.h"
-#include "types-compat.h"
-
 #ifndef	__fenv_static
 #define	__fenv_static	static
 #endif
@@ -222,9 +219,6 @@ fegetexcept(void)
 __END_DECLS
 
 #else /* !__LP64__ */
-
-#include "cdefs-compat.h"
-#include "types-compat.h"
 
 #ifndef	__fenv_static
 #define	__fenv_static	static
