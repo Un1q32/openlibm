@@ -1,5 +1,5 @@
 /*
- * Based on the i387 version written by:
+ * Based on the i386 version written by:
  *	J.T. Conklin (jtc@netbsd.org)
  *	Public domain.
  */

@@ -167,7 +167,7 @@ dd_mul(double a, double b)
  *	Available Precision.  Numer. Math. 18, 224-242 (1971).
  *
  * This algorithm is sensitive to the rounding precision.  FPUs such
- * as the i387 must be set in double-precision mode if variables are
+ * as the i386 must be set in double-precision mode if variables are
  * to be stored in FP registers in order to avoid incorrect results.
  * This is the default on FreeBSD, but not on many other systems.
  *

@@ -72,7 +72,7 @@ ifeq ($(findstring s390,$(ARCH)),s390)
 override ARCH := s390
 endif
 ifneq ($(filter $(ARCH),i386 i486 i586 i686 i387 i487 i587 i687),)
-override ARCH := i387
+override ARCH := i386
 endif
 ifeq ($(ARCH),x86_64)
 override ARCH := amd64
@@ -113,7 +113,7 @@ CFLAGS_add += -fPIC
 shlibdir = $(libdir)
 endif
 
-ifeq ($(ARCH),i387)
+ifeq ($(ARCH),i386)
 CFLAGS_arch  += -m32
 SFLAGS_arch  += -m32
 LDFLAGS_arch += -m32
@@ -137,7 +137,7 @@ SFLAGS_add  += $(SFLAGS_arch)
 LDFLAGS_add += $(LDFLAGS_arch)
 
 CFLAGS_add += -std=c99 -Wall -I$(OPENLIBM_HOME) -I$(OPENLIBM_HOME)/include -I$(OPENLIBM_HOME)/$(ARCH) -I$(OPENLIBM_HOME)/src -DASSEMBLER -D__BSD_VISIBLE -Wno-implicit-function-declaration
-ifneq ($(filter $(ARCH),i387 amd64 powerpc),)
+ifneq ($(filter $(ARCH),i386 amd64 powerpc),)
 CFLAGS_add += -I$(OPENLIBM_HOME)/ld80
 else
 ifneq ($(filter $(ARCH),aarch64),)
@@ -145,7 +145,7 @@ CFLAGS_add += -I$(OPENLIBM_HOME)/ld128
 endif
 endif
 
-ifneq ($(filter $(ARCH),i387 amd64),)
+ifneq ($(filter $(ARCH),i386 amd64),)
 # Determines whether `long double` is the same as `double` on this arch.
 # linux x86_64, for instance, `long double` is 80 bits wide, whereas on macOS aarch64,
 # `long double` is the same as `double`. 

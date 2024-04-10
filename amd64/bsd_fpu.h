@@ -71,7 +71,7 @@ struct save87 {
 	 * before it is inspected for ptracing or for core dumps.  Some
 	 * emulators overwrite the whole struct.  We have no good way of
 	 * knowing how much padding to leave.  Leave just enough for the
-	 * GPL emulator's i387_union (176 bytes total).
+	 * GPL emulator's i386_union (176 bytes total).
 	 */
 	uint8_t		sv_pad[64];	/* padding; used by emulators */
 };
@@ -192,7 +192,7 @@ struct savefpu_ymm {
 #undef __envxmm64
 
 /*
- * The hardware default control word for i387's and later coprocessors is
+ * The hardware default control word for i386's and later coprocessors is
  * 0x37F, giving:
  *
  *	round to nearest

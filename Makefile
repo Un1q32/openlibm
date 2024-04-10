@@ -4,7 +4,7 @@ include ./Make.inc
 SUBDIRS = src $(ARCH) bsdsrc
 ifeq ($(LONG_DOUBLE_NOT_DOUBLE),1)
 # Add ld80 directory on x86 and x64
-ifneq ($(filter $(ARCH),i387 amd64),)
+ifneq ($(filter $(ARCH),i386 amd64),)
 SUBDIRS += ld80
 else
 ifneq ($(filter $(ARCH),aarch64),)
@@ -43,7 +43,7 @@ libopenlibm.a: $(OBJS)
 	$(AR) -rcs libopenlibm.a $(OBJS)
 
 clean:
-	rm -f libopenlibm.a aarch64/*.o amd64/*.o arm/*.o bsdsrc/*.o i387/*.o ld80/*.o ld128/*.o src/*.o
+	rm -f libopenlibm.a aarch64/*.o amd64/*.o arm/*.o bsdsrc/*.o i386/*.o ld80/*.o ld128/*.o src/*.o
 
 install-static: libopenlibm.a
 	mkdir -p $(DESTDIR)$(libdir)

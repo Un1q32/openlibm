@@ -1,12 +1,12 @@
 /*
- * Based on the i387 version written by:
+ * Based on the i386 version written by:
  *	J.T. Conklin (jtc@netbsd.org)
  *	Public domain.
  */
 
 #include <amd64/bsd_asm.h>
 
-//RCSID("from: FreeBSD: src/lib/msun/i387/e_remainder.S,v 1.8 2005/02/04 14:08:32 das Exp")
+//RCSID("from: FreeBSD: src/lib/msun/i386/e_remainder.S,v 1.8 2005/02/04 14:08:32 das Exp")
 //__FBSDID("$FreeBSD: src/lib/msun/amd64/e_remainder.S,v 1.2 2011/01/07 16:13:12 kib Exp $")
 
 ENTRY(remainder)

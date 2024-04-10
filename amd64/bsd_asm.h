@@ -37,7 +37,7 @@
 #define _BSD_ASM_H_
 
 #ifdef __APPLE__
-#include "../i387/osx_asm.h"
+#include "../i386/osx_asm.h"
 #define CNAME(x) EXT(x)
 #else
 #include "bsd_cdefs.h"

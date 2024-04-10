@@ -25,7 +25,7 @@
 #include "fpmath.h"
 #include "math_private.h"
 #if defined(__i386__)
-#include "i387/bsd_ieeefp.h"
+#include "i386/bsd_ieeefp.h"
 #endif
 
 #define	BIAS	(LDBL_MAX_EXP - 1)
