@@ -29,6 +29,8 @@
 #ifndef	_FENV_H_
 #define	_FENV_H_
 
+#include <stdint.h>
+
 #ifdef __LP64__
 
 #ifndef	__fenv_static
