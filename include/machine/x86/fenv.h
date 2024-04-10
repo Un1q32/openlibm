@@ -452,4 +452,6 @@ fegetexcept(void)
 
 __END_DECLS
 
+#endif /* __LP64__ */
+
 #endif	/* !_FENV_H_ */
