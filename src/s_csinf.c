@@ -49,8 +49,8 @@
  *
  */
 
-#include <openlibm_complex.h>
-#include <openlibm_math.h>
+#include <complex.h>
+#include <math.h>
 
 /* calculate cosh and sinh */
 

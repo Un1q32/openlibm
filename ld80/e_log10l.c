@@ -63,7 +63,7 @@
  * log domain:       x < 0; returns MINLOG
  */
 
-#include <openlibm_math.h>
+#include <math.h>
 
 #include "math_private.h"
 

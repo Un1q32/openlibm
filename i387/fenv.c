@@ -32,7 +32,7 @@
 #include "i387/bsd_npx.h"
 
 #define	__fenv_static
-#include <openlibm_fenv.h>
+#include <fenv.h>
 
 #ifdef __GNUC_GNU_INLINE__
 #error "This file must be compiled with C99 'inline' semantics"

@@ -27,8 +27,8 @@
 #include "cdefs-compat.h"
 
 #include <limits.h>
-#include <openlibm_fenv.h>
-#include <openlibm_math.h>
+#include <fenv.h>
+#include <math.h>
 
 #include "math_private.h"
 

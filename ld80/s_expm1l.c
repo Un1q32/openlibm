@@ -57,7 +57,7 @@
  *
  */
 
-#include <openlibm_math.h>
+#include <math.h>
 
 static const long double MAXLOGL = 1.1356523406294143949492E4L;
 

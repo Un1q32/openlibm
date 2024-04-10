@@ -28,8 +28,8 @@
 //__FBSDID("$FreeBSD: src/lib/msun/src/s_fmal.c,v 1.7 2011/10/21 06:30:43 das Exp $");
 
 #include <float.h>
-#include <openlibm_fenv.h>
-#include <openlibm_math.h>
+#include <fenv.h>
+#include <math.h>
 
 #include "fpmath.h"
 #include "math_private.h"
