@@ -51,7 +51,7 @@ install-static: libopenlibm.a
 
 install-headers:
 	mkdir -p $(DESTDIR)$(includedir)
-	cp -RpP -f include/*.h $(DESTDIR)$(includedir)
+	cp -RpP -f include/ $(DESTDIR)$(includedir)
 	cp -RpP -f src/*.h $(DESTDIR)$(includedir)
 
 install: install-static install-headers
