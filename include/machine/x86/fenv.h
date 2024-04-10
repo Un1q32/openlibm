@@ -75,8 +75,6 @@ typedef	uint16_t	fexcept_t;
 #define	_SSE_ROUND_SHIFT	3
 #define	_SSE_EMASK_SHIFT	7
 
-__BEGIN_DECLS
-
 /* Default floating-point environment */
 extern const fenv_t	__fe_dfl_env;
 #define	FE_DFL_ENV	(&__fe_dfl_env)
@@ -218,8 +216,6 @@ fegetexcept(void)
 
 #endif /* __BSD_VISIBLE */
 
-__END_DECLS
-
 #else /* !__LP64__ */
 
 #ifndef	__fenv_static
@@ -273,8 +269,6 @@ typedef	uint16_t	fexcept_t;
  */
 #define	_SSE_ROUND_SHIFT	3
 #define	_SSE_EMASK_SHIFT	7
-
-__BEGIN_DECLS
 
 /* After testing for SSE support once, we cache the result in __has_sse. */
 enum __sse_support { __SSE_YES, __SSE_NO, __SSE_UNK };
@@ -443,8 +437,6 @@ fegetexcept(void)
 }
 
 #endif /* __BSD_VISIBLE */
-
-__END_DECLS
 
 #endif /* __LP64__ */
 

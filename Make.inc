@@ -21,13 +21,6 @@ else
 pkgconfigdir ?= $(libdir)/pkgconfig
 endif
 
-# Build with Code Coverage
-# Only test with Ubuntu + gcc + lcov, may not work for other platform.
-# deps:  https://github.com/linux-test-project/lcov
-# You don't need to set this flag manually, `make coverage` will do it for you.
-# Just Run:  make clean && make coverage -j
-CODE_COVERAGE ?= 0
-
 USEGCC ?= 1
 USECLANG ?= 0
 TOOLPREFIX ?=
@@ -68,8 +61,6 @@ override ARCH := aarch64
 endif
 ifeq ($(findstring arm,$(ARCH)),arm)
 override ARCH := arm
-MARCH ?= armv7-a+fp
-CFLAGS_add += -mhard-float
 endif
 ifeq ($(findstring powerpc,$(ARCH)),powerpc)
 override ARCH := powerpc
@@ -82,7 +73,6 @@ override ARCH := s390
 endif
 ifneq ($(filter $(ARCH),i386 i486 i586 i686 i387 i487 i587 i687),)
 override ARCH := i387
-MARCH ?= i686
 endif
 ifeq ($(ARCH),x86_64)
 override ARCH := amd64
@@ -121,11 +111,6 @@ SONAME_FLAG = -soname
 endif
 CFLAGS_add += -fPIC
 shlibdir = $(libdir)
-endif
-
-# Add `-march` to our CFLAGS if it's defined
-ifneq ($(MARCH),)
-CFLAGS_arch += -march=$(MARCH)
 endif
 
 ifeq ($(ARCH),i387)
