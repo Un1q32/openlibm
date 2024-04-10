@@ -26,7 +26,7 @@
  * $FreeBSD: src/lib/msun/arm/fenv.c,v 1.3 2011/10/16 05:37:56 das Exp $
  */
 
-#include <openlibm_fenv.h>
+#include <fenv.h>
 
 #ifdef __GNUC_GNU_INLINE__
 #error "This file must be compiled with C99 'inline' semantics"
