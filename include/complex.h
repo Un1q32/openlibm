@@ -15,10 +15,6 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#ifdef OPENLIBM_USE_HOST_COMPLEX_H
-#include <complex.h>
-#else /* !OPENLIBM_USE_HOST_COMPLEX_H */
-
 #ifndef OPENLIBM_COMPLEX_H
 #define	OPENLIBM_COMPLEX_H
 
@@ -175,5 +171,3 @@ long double complex cprojl(long double complex);
 long double creall(long double complex);
 
 #endif /* !OPENLIBM_COMPLEX_H */
-
-#endif /* OPENLIBM_USE_HOST_COMPLEX_H */

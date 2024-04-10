@@ -14,10 +14,6 @@
  * $FreeBSD: src/lib/msun/src/openlibm.h,v 1.82 2011/11/12 19:55:48 theraven Exp $
  */
 
-#ifdef OPENLIBM_USE_HOST_MATH_H
-#include <math.h>
-#else /* !OPENLIBM_USE_HOST_MATH_H */
-
 #include <_libm_defs.h>
 
 #ifndef OPENLIBM_MATH_H
@@ -489,5 +485,3 @@ OLM_DLLEXPORT void	sincosl(long double, long double *, long double *);
 }
 #endif
 #endif /* !OPENLIBM_MATH_H */
-
-#endif /* OPENLIBM_USE_HOST_MATH_H */
