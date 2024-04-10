@@ -1,12 +1,3 @@
 *.o
 *~
 *.a
-*.dll*
-*.so*
-*.dylib*
-*.pc
-
-# code coverage
-cov-html/
-*.gcda
-*.gcno
