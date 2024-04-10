@@ -18,7 +18,7 @@
 #define	_MATH_PRIVATE_H_
 
 #include <complex.h>
-#include <_libm_defs.h>
+#include <openlibm_defs.h>
 #include "cdefs-compat.h"
 #include "types-compat.h"
 #include "fpmath.h"
