@@ -43,7 +43,7 @@ libopenlibm.a: $(OBJS)
 	$(AR) -rcs libopenlibm.a $(OBJS)
 
 clean:
-	rm -f libopenlibm.a aarch64/*.o amd64/*.o arm/*.o bsdsrc/*.o i386/*.o ld80/*.o ld128/*.o src/*.o
+	rm -f libopenlibm.a aarch64/*.o amd64/*.o arm/*.o bsdsrc/*.o i386/*.o ld80/*.o ld128/*.o src/*.o riscv64/*.o powerpc/*.o
 
 install-static: libopenlibm.a
 	mkdir -p $(DESTDIR)$(libdir)
